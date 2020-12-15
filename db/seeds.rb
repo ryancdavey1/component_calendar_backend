@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+organization = Initiative.create(name: "Organization")
+coding = Initiative.create(name: "Coding")
+work = Initiative.create(name: "Work")
+projects = Initiative.create(name: "Projects")
