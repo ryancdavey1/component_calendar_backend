@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_16_053326) do
+ActiveRecord::Schema.define(version: 2020_12_17_071758) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,9 +26,11 @@ ActiveRecord::Schema.define(version: 2020_12_16_053326) do
     t.string "description"
     t.date "start_date"
     t.boolean "completed_status"
-    t.integer "initiative_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "initiative_id"
+    t.index ["initiative_id"], name: "index_tasks_on_initiative_id"
   end
 
+  add_foreign_key "tasks", "initiatives"
 end

@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Initiative.destroy_all
+Task.destroy_all
+
 organization = Initiative.create(name: "Organization")
 coding = Initiative.create(name: "Coding")
 work = Initiative.create(name: "Work")
