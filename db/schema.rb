@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2020_12_17_071758) do
     t.boolean "completed_status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "initiative_id"
+    t.bigint "initiative_id", null: false
     t.index ["initiative_id"], name: "index_tasks_on_initiative_id"
   end
 
